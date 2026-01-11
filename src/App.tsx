@@ -203,8 +203,6 @@ export default function LinkedInShowcase() {
           </div>
         )}
 
-
-
         {/* Dialog */}
         <Dialog open={!!selectedPost} onOpenChange={() => setSelectedPost(null)}>
           <DialogContent className="max-w-2xl">
