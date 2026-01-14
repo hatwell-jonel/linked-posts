@@ -1,7 +1,16 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { posts } from './data';
 import { formatDate } from './lib/utils';
-
+import { ModeToggle } from '@/components/mode-toggle';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 const POSTS_PER_PAGE = 3;
 
 export default function LinkedInShowcase() {
@@ -55,43 +64,49 @@ export default function LinkedInShowcase() {
   /**
    * 4️⃣ Reset pagination when sort order changes
    */
-  const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSortOrder(e.target.value as 'latest' | 'oldest');
+  const handleSortChange = (value: 'latest' | 'oldest') => {
+    setSortOrder(value);
     setDisplayedPosts(POSTS_PER_PAGE);
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100">
-      <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-200 dark:bg-accent">
+      <div className="max-w-4xl mx-auto px-4 py-8 ">
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3 uppercase">
+          <h1 className="text-4xl font-bold mb-3 uppercase">
             My LinkedIn Posts
           </h1>
-          <p className="text-gray-600">
+          <p>
             Explore my professional insights and thoughts
           </p>
         </div>
 
         {/* Filters */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <div className="flex flex-col sm:flex-row gap-4 max-w-4xl mx-auto">
-            <div className="relative sm:w-48">
-              <select
+        <div className="rounded-lg shadow-md p-6 mb-8 bg-white dark:bg-background">
+          <div className="flex flex-col sm:flex-row gap-4 max-w-4xl mx-auto md:items-center md:justify-between">
+              <Select
                 value={sortOrder}
-                onChange={handleSortChange}
-                className="w-full h-10 px-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                onValueChange={handleSortChange}
               >
-                <option value="latest">Latest First</option>
-                <option value="oldest">Oldest First</option>
-              </select>
-            </div>
+                <SelectTrigger 
+                  className="w-full md:w-45 h-10! dark:bg-background"
+                >
+                  <SelectValue placeholder="Sort by" />
+                </SelectTrigger>
+                <SelectContent>
+                    <SelectItem value="latest">Latest First</SelectItem>
+                    <SelectItem value="oldest">Oldest First</SelectItem>
+                </SelectContent>
+              </Select>
+            <ModeToggle />
           </div>
+
         </div>
 
         {visiblePosts.length === 0 ? (
-          <div className="text-center py-12 text-gray-500">
+          <div className="text-center py-12">
             No posts found.
           </div>
         ) : (
@@ -100,10 +115,10 @@ export default function LinkedInShowcase() {
               {visiblePosts.map(post => (
                 <div
                   key={post.id}
-                  className="bg-white rounded-lg shadow-md hover:shadow-xl transition"
+                  className="rounded-lg transition bg-white dark:bg-background"
                 >
                   <div className="p-6">
-                    <span className="text-xs text-gray-500">
+                    <span className="text-sm text-gray-400">
                       {formatDate(post.date)}
                     </span>
 
@@ -111,7 +126,7 @@ export default function LinkedInShowcase() {
                       {post.title}
                     </h3>
 
-                    <p className="text-gray-600 mt-2">
+                    <p className="text-gray-400 mt-2">
                       {post.description}
                     </p>
 
