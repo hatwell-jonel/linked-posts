@@ -52,6 +52,13 @@ export const posts = [
         description: "HTTPS and SSH are two ways GitHub verifies who you are, and choosing the right one can save you from constant login prompts and identity mix-ups. This breakdown helps you understand when to use each so your workflow stays secure, clean, and frustration-free.",
         date: "1/11/2026"
     },
+    {
+        id: uuidv4(),
+        title: "🚀 Debounce is the easiest way to stop unnecessary API calls.",
+        linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7417590305769676800/",
+        description: "This post breaks down debounce in a simple, easy-to-understand way. It shows how waiting for the right moment can reduce unnecessary work and make apps feel smoother. You’ll also see a practical example using React / Next.js.",
+        date: "1/15/2026"
+    },
 ];
 
 // https://trevorfox.com/linkedin-post-date-extractor.html
