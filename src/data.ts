@@ -59,6 +59,13 @@ export const posts = [
         description: "This post breaks down debounce in a simple, easy-to-understand way. It shows how waiting for the right moment can reduce unnecessary work and make apps feel smoother. You’ll also see a practical example using React / Next.js.",
         date: "1/15/2026"
     },
+    {
+        id: uuidv4(),
+        title: "🔒 Understanding Closures in JavaScript",
+        linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7418299564631195648/",
+        description: "This post explains closures in a simple and easy-to-understand way. It shows how functions can remember their surrounding state, why this matters, and includes a practical example for writing cleaner and more reliable code.",
+        date: "1/17/2026"
+    }
 ];
 
 // https://trevorfox.com/linkedin-post-date-extractor.html
