@@ -65,6 +65,13 @@ export const posts = [
         linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7418299564631195648/",
         description: "This post explains closures in a simple and easy-to-understand way. It shows how functions can remember their surrounding state, why this matters, and includes a practical example for writing cleaner and more reliable code.",
         date: "1/17/2026"
+    },
+    {
+        id: uuidv4(),
+        title: "🚀Why I Started Using Standard Commit Messages",
+        linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7419394948652875776/",
+        description: "A small habit that made a big difference in how I work with Git. Sharing why I started using standard commit messages and how they keep my code history clean and easy to understand.",
+        date: "1/20/2026"
     }
 ];
 
