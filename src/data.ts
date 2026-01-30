@@ -73,12 +73,19 @@ export const posts = [
         description: "A small habit that made a big difference in how I work with Git. Sharing why I started using standard commit messages and how they keep my code history clean and easy to understand.",
         date: "1/20/2026"
     },
-       {
+    {
         id: uuidv4(),
         title: "💻 React Optimization: useMemo vs useCallback ",
         linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7420412059235950592/",
         description: "When building React apps, you often hear about useMemo and useCallback—but what do they actually do, and how do they differ? Let’s break it down.",
         date: "1/23/2026"
+    },
+    {
+        id: uuidv4(),
+        title: "🚀 HubSpot SEO Certified!",
+        linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7422945554344648704/",
+        description: "As a web developer, I recently completed the HubSpot SEO Certification and gained a deeper understanding of how SEO works behind the scenes—from on-page optimization to technical SEO and rich results.",
+        date: "1/30/2026"
     }
 ];
 
