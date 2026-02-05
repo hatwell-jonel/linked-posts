@@ -86,6 +86,13 @@ export const posts = [
         linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7422945554344648704/",
         description: "As a web developer, I recently completed the HubSpot SEO Certification and gained a deeper understanding of how SEO works behind the scenes—from on-page optimization to technical SEO and rich results.",
         date: "1/30/2026"
+    },
+    {
+        id: uuidv4(),
+        title: "🚀 How OpenCode Changed the Way I Build Projects",
+        linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7425169491065458688/?originTrackingId=18WySCTzsbtyLfC5Av8OPg%3D%3D",
+        description: "Just started using OpenCode, an AI-powered coding assistant that helps me write, optimize, and refactor code faster.",
+        date: "2/05/2026"
     }
 ];
 
